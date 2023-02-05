@@ -26,7 +26,8 @@ const TaskLi = styled(motion.li)`
   border: none;
   outline: none;
   width: 600px;
-  height: 50px;
+  min-height: 50px;
+  height: fit-content;
   background-color: #ffffff26;
   color: #fff;
   border-radius: 5px;
@@ -42,6 +43,17 @@ const Span = styled.span`
   display: flex;
   align-items: center;
   gap: 20px;
+`;
+const TaskValue = styled.p`
+  display: flex;
+  align-items: center;
+  width: 400px;
+  min-height: 50px;
+  height: fit-content;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
 `;
 const Btn = styled(Button)`
   height: 40px;
@@ -122,9 +134,11 @@ export const DisplayTodos = () => {
               }
             />
             {task.completed === true ? (
-              <del>{task.title}</del>
+              <del>
+                <TaskValue>{task.title}</TaskValue>
+              </del>
             ) : (
-              <>{task.title}</>
+              <TaskValue>{task.title}</TaskValue>
             )}
           </Span>
           <Btn

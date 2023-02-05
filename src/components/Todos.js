@@ -22,14 +22,13 @@ const Title = styled.h2`
   padding-bottom: 50px;
 `;
 const AppContainer = styled(Container)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   min-height: 90vh;
+  height: fit-content;
   width: 90%;
   background-color: #ffffff21;
   border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
 `;
 export const Todos = () => {
   return (

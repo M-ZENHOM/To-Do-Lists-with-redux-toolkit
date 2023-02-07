@@ -46,6 +46,8 @@ export const DisplayTodos = () => {
   const completedTasks = useSelector((state) =>
     state.todos.filter((task) => task.completed === true)
   );
+  const sortedTodoList = [...todos];
+  sortedTodoList.sort((a, b) => new Date(b.time) - new Date(a.time));
   return (
     <>
       {todos.map((todo) => (

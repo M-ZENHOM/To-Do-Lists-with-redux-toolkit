@@ -9,9 +9,9 @@ const todoSlice = createSlice({
         id: Date.now(),
         title: action.payload.title,
         completed: false,
+        time: new Date().toLocaleString(),
       };
       state.push(newTodo);
-      //   localStorage.setItem("todos", JSON.stringify(state));
     },
     setCompleted: (state, action) => {
       const index = state.findIndex((todo) => todo.id === action.payload.id);

@@ -22,7 +22,7 @@ const Input = styled.input`
   height: 50px;
   background-color: #fff;
   color: #000;
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     width: 300px;
   }
 `;

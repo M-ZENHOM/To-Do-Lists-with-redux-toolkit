@@ -33,7 +33,7 @@ const AppContainer = styled(Container)`
 export const Todos = () => {
   return (
     <AppContainer>
-      <Title>TO-DO LIST APP</Title>
+      <Title>TODO LIST</Title>
       <Wrapper>
         <CreateTodos />
         <DisplayTodos />

@@ -1,4 +1,3 @@
-import { format } from "date-fns";
 import React from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
@@ -111,7 +110,7 @@ export const TodoItem = ({ todo }) => {
           <FaTrash />
         </Btn>
       </Todo>
-      <Time>{format(new Date(todo.time), "MM/dd/yyyy")}</Time>
+      <Time>{todo.time}</Time>
     </TodoContainer>
   );
 };

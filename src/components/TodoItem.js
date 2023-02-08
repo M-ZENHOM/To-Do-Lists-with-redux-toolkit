@@ -111,7 +111,7 @@ export const TodoItem = ({ todo }) => {
           <FaTrash />
         </Btn>
       </Todo>
-      <Time>{format(new Date(todo.time), "MM/dd/yyyy")}</Time>
+      <Time>{format(new Date(todo.time), "PPPP")}</Time>
     </TodoContainer>
   );
 };
